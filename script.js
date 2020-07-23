@@ -19,3 +19,24 @@ iphoneBtn.addEventListener("click" , function(){
     document.getElementById("total").innerText = totalNum + 1280;
 
 })
+
+// decrease iphone in cart
+
+const caseBtn = document.getElementById("iphoneMinus");
+caseBtn.addEventListener("click" , function(){
+    const iphoneNumber = document.getElementById("iphoneNumber").value;
+    const currentIphoneNum = parseFloat(iphoneNumber);
+    document.getElementById("iphoneNumber").value = currentIphoneNum - 1;
+    const currentIphonePrice = document.getElementById("currentIphonePrice").innerText;
+    const iphoneNum = parseFloat(currentIphonePrice);
+    document.getElementById("currentIphonePrice").innerText = iphoneNum - 1219;
+    const subTotal = document.getElementById("subTotal").innerText;
+    const subTotalNum = parseFloat(subTotal);
+    document.getElementById("subTotal").innerText = subTotalNum - 1278;
+    const tax = document.getElementById("tax").innerText;
+    const taxNum = parseFloat(tax);
+    document.getElementById("tax").innerText = taxNum - 2;
+    const total = document.getElementById("total").innerText;
+    const totalNum = parseFloat(total);
+    document.getElementById("total").innerText = totalNum - 1280;
+})
