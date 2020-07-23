@@ -104,3 +104,24 @@ removeIphoneBtn.addEventListener("click" , function(){
     document.getElementById("total").innerText = 1280;
 
 })
+
+// Remove iPhone case from cart
+
+const removeCaseBtn = document.getElementById("removeCaseBtn");
+removeCaseBtn.addEventListener("click", function(){
+    const caseNumber = document.getElementById("caseNumber").value;
+    const currentCaseNum = parseFloat(caseNumber);
+    document.getElementById("caseNumber").value = 1;
+    const currentCasePrice = document.getElementById("currentCasePrice").innerText;
+    const casePriceNum = parseFloat(currentCasePrice);
+    document.getElementById("currentCasePrice").innerText = 59;
+    const subTotal = document.getElementById("subTotal").innerText;
+    const subTotalNum = parseFloat(subTotal);
+    document.getElementById("subTotal").innerText = 59;
+    const tax = document.getElementById("tax").innerText;
+    const taxNum = parseFloat(tax);
+    document.getElementById("tax").innerText = 2;
+    const total = document.getElementById("total").innerText;
+    const totalNum = parseFloat(total);
+    document.getElementById("total").innerText = 59;
+})
